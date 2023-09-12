@@ -21,9 +21,9 @@ public class Diamond {
         }
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Diamond diamond = new Diamond(7);
         diamond.printDiamond();
-    }
+    }*/
 
 }
