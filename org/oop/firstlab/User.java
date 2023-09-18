@@ -1,4 +1,4 @@
-package org.oop;
+package org.oop.firstlab;
 
 public class User {
     private String firstName;

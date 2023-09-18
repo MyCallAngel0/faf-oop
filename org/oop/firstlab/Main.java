@@ -1,4 +1,4 @@
-package org.oop;
+package org.oop.firstlab;
 
 import java.util.Scanner;
 
@@ -9,13 +9,13 @@ public class Main {
         int choice = scanner.nextInt();
         while (true) {
             if (choice == 1) {
-                org.oop.User user1 = new org.oop.User("Ion", "Doe");
-                org.oop.User user2 = new org.oop.User("Miley", "Cyrus");
+                User user1 = new User("Ion", "Doe");
+                User user2 = new User("Miley", "Cyrus");
                 System.out.println(user1.displayInitials());
                 System.out.println(user2.displayInitials());
                 break;
             } else if (choice == 2) {
-                org.oop.Diamond diamond = new org.oop.Diamond(7);
+                Diamond diamond = new Diamond(7);
                 diamond.printDiamond();
                 break;
             } else {

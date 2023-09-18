@@ -1,4 +1,4 @@
-package org.oop;
+package org.oop.firstlab;
 
 public class Diamond {
     private int size;
