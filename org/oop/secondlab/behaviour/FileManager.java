@@ -16,22 +16,26 @@ import java.util.Scanner;
 public class FileManager {
     public static void save(List<Faculty> faculties) {
         try {
-            FileWriter myWriter = new FileWriter("save.txt");
+            FileWriter myWriter = new FileWriter("D:\\Coding\\OOP\\Java\\src\\main\\java\\org\\oop\\secondlab\\behaviour\\save");
             for(Faculty faculty : faculties) {
                 myWriter.write(faculty.toString());
             }
             myWriter.close();
+            LogManager.log("INFO: In function save -> Faculties saved successfully!");
         } catch(IOException e) {
             System.out.println("An error occurred.");
-            LogManager.log("ERROR : function readDataFromFile -> File not found!");
+            LogManager.log("ERROR : In function save -> File not found!");
             System.out.println("File not found!");
+        } catch(NullPointerException e) {
+            LogManager.log("ERROR : In function save -> There are no faculties to save!");
+            System.out.println("There are no faculties to save!");
         }
     }
-    public static List<Faculty> load() {
-        List<Faculty> faculties = new ArrayList<>();
-        LogManager.log("INFO: function readDataFromFile -> Executing...");
+    public static ArrayList<Faculty> load() {
+        ArrayList<Faculty> faculties = new ArrayList<>();
+        LogManager.log("INFO: From function load -> Executing...");
         try {
-            File myFile = new File("save.txt");
+            File myFile = new File("D:\\Coding\\OOP\\Java\\src\\main\\java\\org\\oop\\secondlab\\behaviour\\save");
             if(myFile.exists() && myFile.length()==0) {
                 return null;
             }
@@ -39,8 +43,11 @@ public class FileManager {
             int index = 0;
             while (myReader.hasNextLine()) {
                 String name = myReader.nextLine();
+                System.out.println(name);
                 String abbreviation = myReader.nextLine();
+                System.out.println(abbreviation);
                 String studyField = myReader.nextLine();
+                System.out.println(studyField);
                 String checkStudent = myReader.nextLine();
                 if (checkStudent.equals("[]")) {
                     faculties.add(new Faculty(name, abbreviation, StudyField.valueOf(studyField)));
@@ -59,25 +66,36 @@ public class FileManager {
                         Student student = new Student(firstName, lastName, email, LocalDate.parse(enrollmentDate), LocalDate.parse(dateOfBirth), Boolean.parseBoolean(graduated));
                         faculties.get(index).addStudent(student);
                         checkStudent = myReader.nextLine();
+                        if(checkStudent.equals(",")) {
+                            checkStudent = myReader.nextLine();
+                        }
                     }
                 }
                 index++;
             }
             myReader.close();
-            LogManager.log("INFO: function readDataFromFile -> Successfully Read Data!");
+            LogManager.log("INFO: From function load -> Successfully Read Data!");
             return faculties;
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
-            LogManager.log("ERROR: function readDataFromFile -> File not found!");
+            LogManager.log("ERROR: In function load -> File not found!");
             System.out.println("File not found!");
+        }
+        catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            LogManager.log("ERROR: In function load -> Wrong Argument!");
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            LogManager.log("ERROR: In function load -> An error has occurred!");
         }
         return null;
     }
 
-    public static List<String> readStudents(String filename) {
-        LogManager.log("INFO: function readListOfStudentsEmail -> Proccessing...");
+    public static ArrayList<String> readStudents(String filename) {
+        LogManager.log("INFO: From function readStudents -> Executing...");
         try {
-            List<String> emailList = new ArrayList<>();
+            ArrayList<String> emailList = new ArrayList<>();
             File myFile = new File(filename+".txt");
             if(myFile.exists() && myFile.length()==0) {
                 return null;
@@ -90,17 +108,17 @@ public class FileManager {
                 }
             }
             myReader.close();
-            LogManager.log("INFO: function readDataFromFile -> Successfully Read Data!");
+            LogManager.log("INFO: From function readStudents -> Successfully Read Data!");
             return emailList;
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             System.out.println("File not found!");
-            LogManager.log("ERROR: function readDataFromFile -> File not found!");
+            LogManager.log("ERROR: In function readStudents -> File not found!");
         }
         return null;
     }
     public static void readStudents(String filename, int indexOfFaculty, List<Faculty> faculties) {
-        LogManager.log("INFO: function readListOfStudentsEmail -> Proccessing...");
+        LogManager.log("INFO: From function readStudents -> Executing...");
         try{
             File myFile = new File(filename + ".txt");
             if(myFile.exists() && myFile.length()==0) {
@@ -123,12 +141,11 @@ public class FileManager {
                     }
                 }
             }
-            save(faculties);
             fileReader.close();
-            LogManager.log("INFO: function readDataFromFile -> Data read succesfully!");
+            LogManager.log("INFO: From function readStudents -> Data read succesfully!");
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
-            LogManager.log("ERROR : function readDataFromFile -> File not found!");
+            LogManager.log("ERROR: In function readStudents -> File not found!");
             System.out.println("File not found!");
         }
     }

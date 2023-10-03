@@ -7,9 +7,9 @@ import java.time.format.DateTimeFormatter;
 public class LogManager {
     public static void log(String message) {
         try {
-            FileWriter loggingFile = new FileWriter("log.txt", true);
+            FileWriter loggingFile = new FileWriter("D:\\Coding\\OOP\\Java\\src\\main\\java\\org\\oop\\secondlab\\behaviour\\log", true);
             String currentTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-            loggingFile.write(String.format("[%s] %7s %s%n", currentTime, message));
+            loggingFile.write(String.format("[%s] %s \n", currentTime, message));
             loggingFile.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());

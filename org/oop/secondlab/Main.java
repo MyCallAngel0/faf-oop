@@ -6,7 +6,8 @@ import org.oop.secondlab.behaviour.FileManager;
 public class Main {
     public static void main(String[] args) {
         ApplicationLoop app = new ApplicationLoop();
+        app.university.faculties = FileManager.load();
         app.run();
-        FileManager.save(app.university.faculties);
+        //FileManager.save(app.university.faculties);
     }
 }

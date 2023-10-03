@@ -9,23 +9,11 @@ public class Faculty  {
     private final String abbreviation;
     public ArrayList<Student> students = new ArrayList<>();
     private final StudyField studyField;
-    private String identifier;
-
-    //fcim, fua, fta, feie, fm, fet, fd, fmv
 
     public Faculty(String name, String abbreviation, StudyField studyField) {
         this.name = name;
         this.abbreviation = abbreviation;
         this.studyField = studyField;
-        switch(studyField) {
-            case FOOD_TECHNOLOGY -> this.identifier = "tpa";
-            case INDUSTRIAL_DESIGN -> this.identifier = "dip";
-            case VETERINARY_MEDICINE -> this.identifier = "sasp";
-            case SOFTWARE_ENGINEERING -> this.identifier = "isa";
-            case URBANISM_ARCHITECTURE -> this.identifier = "udu";
-            case MECHANICAL_ENGINEERING -> this.identifier = "tme";
-            case TELECOMMUNICATION_SYSTEMS -> this.identifier = "tse";
-        }
     }
 
     public void createAndAssignStudent(String[] student) {
@@ -44,22 +32,22 @@ public class Faculty  {
     public void graduateStudent(String email) {
         students.stream()
                 .filter(student -> student.getEmail().equals(email)).findFirst()
-                .ifPresentOrElse(student -> { if(student.isGraduated()) {
+                .ifPresent(student -> { if(student.isGraduated()) {
                     System.out.println("Student is already a graduate!");
                 } else {
                     student.setGraduated(true);
                     System.out.println(student.getFirstName() + " " + student.getLastName() + " has graduated!"); }
-                }, () -> System.out.println("Student not found!"));
+                });
     }
 
     public void displayEnrolledStudents() {
         students.stream().filter(student -> !student.isGraduated())
-                .forEach(student -> System.out.println(student.getFirstName() + student.getLastName()));
+                .forEach(student -> System.out.println(student.getFirstName() + " " + student.getLastName()));
     }
 
     public void displayGraduatedStudents() {
         students.stream().filter(student -> student.isGraduated())
-                .forEach(student -> System.out.println(student.getFirstName() + student.getLastName()));
+                .forEach(student -> System.out.println(student.getFirstName() + " " + student.getLastName()));
     }
 
     public void isBelongingToThisFaculty(String email) {
@@ -87,20 +75,11 @@ public class Faculty  {
         return studyField;
     }
 
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
-    }
-
     @Override
     public String toString() {
-        return "\n" + name + '\n' +
+        return name + '\n' +
                 abbreviation + "\n" +
                 studyField + "\n" +
-                identifier + "\n" +
                 students + "\n" ;
     }
 }
