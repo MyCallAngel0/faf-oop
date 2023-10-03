@@ -33,9 +33,4 @@ public class University {
         return faculties.toString();
     }
 
-    /*1. Create a new faculty.
-2. Search what faculty a student belongs to by a unique identifier (for example by email
-            or a unique ID).
-            3. Display University faculties.
-4. Display all faculties belonging to a field. (Ex. FOOD_TECHNOLOGY)*/
 }

@@ -13,7 +13,6 @@ public class LogManager {
             loggingFile.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
-            //e.printStackTrace();
         }
     }
 }

@@ -1,7 +1,10 @@
 package org.oop.secondlab.models;
 
+import org.oop.secondlab.behaviour.LogManager;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Faculty  {
 
@@ -50,25 +53,58 @@ public class Faculty  {
                 .forEach(student -> System.out.println(student.getFirstName() + " " + student.getLastName()));
     }
 
+    public void displayStudent(String email) {
+        AtomicBoolean bool = new AtomicBoolean(false);
+        students.stream().filter(student -> student.getEmail().equals(email)).findFirst()
+                .ifPresent(student -> {
+                    System.out.println(student.toString());
+                    LogManager.log("INFO: From function displayStudent -> Student displayed successfully!");
+                    bool.set(true);
+                });
+        if (bool.get()) {
+            LogManager.log("Error: In function displayStudent -> Student not found!");
+            System.out.println("Student not found!");
+        }
+    }
+
     public void isBelongingToThisFaculty(String email) {
         System.out.println( students.stream().anyMatch(student -> student.getEmail().equals(email))
                 ? "Student is enrolled in this faculty!" : "Student is not enrolled in this faculty!" );
+    }
+    public void changeStudentFirstName(String email, String firstName) {
+        AtomicBoolean bool = new AtomicBoolean(false);
+        students.stream().filter(student -> student.getEmail().equals(email))
+                .findFirst().ifPresent(student -> {
+                    student.setFirstName(firstName);
+                    bool.set(true);
+                    LogManager.log("Info: From function changeStudentFirstName -> Student first name changed!");
+                });
+        if (bool.get()) {
+            LogManager.log("Error: In function changeStudentFirstName -> Student not found!");
+            System.out.println("Student not found!");
+        }
+    }
+
+    public void changeStudentLastName(String email, String lastName) {
+        AtomicBoolean bool = new AtomicBoolean(false);
+        students.stream().filter(student -> student.getEmail().equals(email))
+                .findFirst().ifPresent(student -> {
+                    student.setLastName(lastName);
+                    bool.set(true);
+                    LogManager.log("Info: From function changeStudentLastName -> Student last name changed!");
+                });
+        if (bool.get()) {
+            LogManager.log("Error: In function changeStudentLastName -> Student not found!");
+            System.out.println("Student not found!");
+        }
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getAbbreviation() {
         return abbreviation;
-    }
-
-    public ArrayList<Student> getStudents() {
-        return students;
     }
 
     public StudyField getStudyField() {

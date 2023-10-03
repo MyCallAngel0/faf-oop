@@ -22,6 +22,7 @@ public class FileManager {
             }
             myWriter.close();
             LogManager.log("INFO: In function save -> Faculties saved successfully!");
+            System.out.println("Faculties saved successfully");
         } catch(IOException e) {
             System.out.println("An error occurred.");
             LogManager.log("ERROR : In function save -> File not found!");
@@ -43,11 +44,8 @@ public class FileManager {
             int index = 0;
             while (myReader.hasNextLine()) {
                 String name = myReader.nextLine();
-                System.out.println(name);
                 String abbreviation = myReader.nextLine();
-                System.out.println(abbreviation);
                 String studyField = myReader.nextLine();
-                System.out.println(studyField);
                 String checkStudent = myReader.nextLine();
                 if (checkStudent.equals("[]")) {
                     faculties.add(new Faculty(name, abbreviation, StudyField.valueOf(studyField)));
@@ -75,6 +73,7 @@ public class FileManager {
             }
             myReader.close();
             LogManager.log("INFO: From function load -> Successfully Read Data!");
+            System.out.println("Data loaded successfully!");
             return faculties;
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");

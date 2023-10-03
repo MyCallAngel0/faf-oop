@@ -2,8 +2,8 @@ package org.oop.secondlab.models;
 import java.time.LocalDate;
 
 public class Student {
-    private final String firstName;
-    private final String lastName;
+    private String firstName;
+    private String lastName;
     private final String email;
     private final LocalDate enrollmentDay;
     private final LocalDate dateOfBirth;
@@ -28,12 +28,12 @@ public class Student {
         return lastName;
     }
 
-    public LocalDate getEnrollmentDay() {
-        return enrollmentDay;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public boolean isGraduated() {
