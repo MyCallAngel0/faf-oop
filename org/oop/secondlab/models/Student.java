@@ -53,11 +53,7 @@ public class Student {
     }
 
     public Student(String firstName, String lastName, String email, LocalDate enrollmentDay, LocalDate dateOfBirth, boolean graduated) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.enrollmentDay = enrollmentDay;
-        this.dateOfBirth = dateOfBirth;
+        this(firstName, lastName, email, enrollmentDay, dateOfBirth);
         this.graduated = graduated;
     }
 
