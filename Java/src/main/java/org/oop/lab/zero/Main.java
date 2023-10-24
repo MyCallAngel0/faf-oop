@@ -1,4 +1,4 @@
-package org.oop.firstlab;
+package org.oop.lab.zero;
 
 import java.util.Scanner;
 
