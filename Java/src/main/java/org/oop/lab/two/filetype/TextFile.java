@@ -40,9 +40,13 @@ public class TextFile extends FileType {
     }
     @Override
     public void getInfo() {
-        getAdditionalFileInfo();
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println("File name: " + this.fileName);
+        System.out.println("File created: " + this.creationTime);
+        System.out.println("File modified: " + this.modifiedTime);
         System.out.println("Line count: " + this.lines);
         System.out.println("Character count: " + this.characters);
         System.out.println("Word count: " + this.words);
+        System.out.println();
     }
 }

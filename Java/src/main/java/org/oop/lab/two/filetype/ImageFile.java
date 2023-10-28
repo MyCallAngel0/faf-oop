@@ -12,7 +12,6 @@ public class ImageFile extends FileType {
     public ImageFile(String filename, String filePath) {
         super(filename, filePath);
         getAdditionalFileInfo();
-
     }
 
     @Override
@@ -29,8 +28,13 @@ public class ImageFile extends FileType {
 
     @Override
     public void getInfo() {
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println("File name: " + this.fileName);
+        System.out.println("File created: " + this.creationTime);
+        System.out.println("File modified: " + this.modifiedTime);
         System.out.println("Image width: " + this.width);
         System.out.println("Image height: " + this.height);
+        System.out.println();
 
     }
 }
