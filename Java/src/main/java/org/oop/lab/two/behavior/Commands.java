@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class Commands {
     private static String folderPath = ".\\src\\main\\java\\org\\oop\\lab\\two\\git";
-    private  static Map<String, FileInfo> fileSnapshot = new HashMap<>();
+    protected static Map<String, FileInfo> fileSnapshot = new HashMap<>();
     protected static void commit() {
         System.out.println("Created Snapshot at: " + LocalDateTime.now());
         status();
@@ -21,30 +21,26 @@ public class Commands {
         storeSnapshot();
     }
 
-    protected static void info() {
-        System.out.print("Which files?\n> ");
-        Scanner scanner = new Scanner(System.in);
-        String infoAction = scanner.nextLine();
-
-        switch (infoAction) {
-            case "all":
+    protected static void info(String input) {
+        switch (input.substring(input.indexOf(" ") + 1, input.length()).trim()) {
+            case "all files":
                 new FileManager().fileArray.forEach(fileType -> fileType.getInfo());
                 break;
-            case "image":
+            case "image files":
                 new FileManager().fileArray.forEach(fileType -> {
                     if(fileType instanceof ImageFile) {
                         fileType.getInfo();
                     }
                 });
                 break;
-            case "text":
+            case "text files":
                 new FileManager().fileArray.forEach(fileType -> {
                     if(fileType instanceof TextFile) {
                         fileType.getInfo();
                     }
                 });
                 break;
-            case "program":
+            case "program files":
                 new FileManager().fileArray.forEach(fileType -> {
                     if(fileType instanceof ProgramFile) {
                         fileType.getInfo();
@@ -67,7 +63,7 @@ public class Commands {
                 System.out.println(file.getName() + " - Created");
                 size++;
             } else if (fileInfo.getLastModified() < file.lastModified()) {
-                System.out.println(file.getName() + " - Modified");
+                System.out.println(file.getName() + " - Changed");
                 size++;
             } else {
                 System.out.println(file.getName() + " - Not Changed");

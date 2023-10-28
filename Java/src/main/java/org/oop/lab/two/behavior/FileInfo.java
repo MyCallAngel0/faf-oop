@@ -29,14 +29,9 @@ public class FileInfo implements Serializable {
         return lastModified;
     }
 
-    /* TODO
-    HashMap fileInfo
-    if !getvalues - created
-    if last modified == - not changed else changed
-    last modified should be datetime
-    if key not in directory - deleted
-    thread should have the same but updated each 5s
-    may use the filetype for some variables
-     */
+    public void setLastModified(long lastModified) {
+        this.lastModified = lastModified;
+    }
+
 }
 

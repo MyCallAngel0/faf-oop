@@ -1,7 +1,5 @@
 package org.oop.lab.two.behavior;
 
-import org.oop.lab.two.filetype.FileType;
-
 import java.util.Scanner;
 
 import static org.oop.lab.two.behavior.Commands.*;
@@ -9,13 +7,10 @@ import static org.oop.lab.two.behavior.Commands.*;
 public class Application {
 
     private final Scanner scanner;
-    private FileManager fileManager;
     private String command;
-    private boolean saved;
 
     public Application() {
         this.scanner = new Scanner(System.in);
-        this.fileManager = new FileManager();
         this.command = "";
     }
 
@@ -24,14 +19,14 @@ public class Application {
         System.out.println("Available commands: commit, info, status");
         while (true) {
             System.out.print("> ");
-            String action = scanner.nextLine();
-
-            switch (action) {
+            String input = scanner.nextLine();
+            String[] action = input.split("\\s");
+            switch (action[0]) {
                 case "commit":
                     commit();
                     break;
                 case "info":
-                    info();
+                    info(input);
                     break;
                 case "status":
                     status();
