@@ -35,6 +35,11 @@ public class FileManager {
         }
     }
 
+    public void getFileInformation(String filename) {
+        fileArray.stream().filter(fileType -> fileType.getFileName().equalsIgnoreCase(filename))
+                .findFirst().ifPresentOrElse(FileType::getInfo, () -> System.out.println("File not found"));
+    }
+
     private static boolean isImageFile(String extension) {
         List<String> extensions = List.of("jpg", "png", "jpeg", "gif");
         return extensions.contains(extension);

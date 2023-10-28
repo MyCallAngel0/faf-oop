@@ -22,19 +22,21 @@ public class Commands {
     }
 
     protected static void info(String input) {
-        switch (input.substring(input.indexOf(" ") + 1, input.length()).trim()) {
+        FileManager fileManager = new FileManager();
+        String fileInput = input.substring(input.indexOf(" ") + 1, input.length()).trim();
+        switch (fileInput) {
             case "all files":
-                new FileManager().fileArray.forEach(fileType -> fileType.getInfo());
+                fileManager.fileArray.forEach(fileType -> fileType.getInfo());
                 break;
             case "image files":
-                new FileManager().fileArray.forEach(fileType -> {
+                fileManager.fileArray.forEach(fileType -> {
                     if(fileType instanceof ImageFile) {
                         fileType.getInfo();
                     }
                 });
                 break;
             case "text files":
-                new FileManager().fileArray.forEach(fileType -> {
+                fileManager.fileArray.forEach(fileType -> {
                     if(fileType instanceof TextFile) {
                         fileType.getInfo();
                     }
@@ -50,7 +52,7 @@ public class Commands {
             case "exit":
                 break;
             default:
-                System.out.println("Invalid command. Please try again.");
+                fileManager.getFileInformation(fileInput);
         }
     }
 
