@@ -1,10 +1,11 @@
 package org.oop.lab.two.behavior;
 
 import java.io.File;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class FileInfo {
+public class FileInfo implements Serializable {
     private String fileName;
     private String extension;
     private long lastModified;
@@ -28,10 +29,6 @@ public class FileInfo {
         return lastModified;
     }
 
-    @Override
-    public String toString() {
-        return fileName + '.' + extension;
-    }
     /* TODO
     HashMap fileInfo
     if !getvalues - created

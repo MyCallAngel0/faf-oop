@@ -4,13 +4,10 @@ import org.oop.lab.two.filetype.ImageFile;
 import org.oop.lab.two.filetype.ProgramFile;
 import org.oop.lab.two.filetype.TextFile;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
+import java.io.*;
 import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Commands {
     private static String folderPath = ".\\src\\main\\java\\org\\oop\\lab\\two\\git";
@@ -21,6 +18,7 @@ public class Commands {
         fileSnapshot.clear();
         FileManager fileManager = new FileManager();
         Arrays.stream(fileManager.getFiles()).forEach(file -> fileSnapshot.put(file.getName(), new FileInfo(file)));
+        storeSnapshot();
     }
 
     protected static void info() {
@@ -77,11 +75,27 @@ public class Commands {
             }
         }
         if (size < fileSnapshot.size()) {
+            List<String> fileNameArray = Arrays.stream(fileManager.getFiles()).map(File::getName).collect(Collectors.toList());
             for (FileInfo fileInfo1 : fileSnapshot.values()) {
-                if (!Arrays.stream(fileManager.getFiles()).toList().contains(fileInfo1)) {
-                    System.out.println(fileInfo1 + " - Deleted");
+                if (!fileNameArray.contains(fileInfo1.getFileName())) {
+                    System.out.println(fileInfo1.getFileName() + " - Deleted");
                 }
             }
+        }
+    }
+
+    private static void storeSnapshot() {
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(".\\src\\main\\java\\org\\oop\\lab\\two\\behavior\\snapshot.txt"))){
+            outputStream.writeObject(fileSnapshot);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    protected static void takeSnapshot() {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(".\\src\\main\\java\\org\\oop\\lab\\two\\behavior\\snapshot.txt"))) {
+            fileSnapshot = (HashMap<String, FileInfo>) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("There are no previous commits");
         }
     }
 }

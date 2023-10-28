@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba50781-15ee-4ac8-9899-a3ac911de5f0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/snapshot.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/FileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/FileType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/ImageFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/ImageFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/ProgramFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/ProgramFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/TextFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/TextFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/CommandManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/FileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/FileType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/ImageFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/ImageFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/ProgramFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/ProgramFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/TextFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/TextFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/git/Bostan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Commands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileInfo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +58,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="M:\Coding\OOP\faf-oop\Java\src\main\java\org\oop\lab\two\git" />
       <recent name="M:\Coding\OOP\faf-oop\Java\src\main\java\org\oop\lab\two\filetype" />
     </key>
   </component>
@@ -79,7 +74,7 @@
       <workItem from="1698139848376" duration="79000" />
       <workItem from="1698139949771" duration="421000" />
       <workItem from="1698323105283" duration="37000" />
-      <workItem from="1698428780375" duration="17986000" />
+      <workItem from="1698428780375" duration="19494000" />
     </task>
     <servers />
   </component>

@@ -20,6 +20,7 @@ public class Application {
     }
 
     public void run() {
+        Commands.takeSnapshot();
         System.out.println("Available commands: commit, info, status");
         while (true) {
             System.out.print("> ");
