@@ -7,16 +7,14 @@ import static org.oop.lab.two.behavior.Commands.*;
 public class Application {
 
     private final Scanner scanner;
-    private String command;
 
     public Application() {
         this.scanner = new Scanner(System.in);
-        this.command = "";
     }
 
     public void run() {
         Commands.takeSnapshot();
-        System.out.println("Available commands: commit, info, status");
+        System.out.println("Available commands: commit, info <filename>, status, exit");
         while (true) {
             System.out.print("> ");
             String input = scanner.nextLine();

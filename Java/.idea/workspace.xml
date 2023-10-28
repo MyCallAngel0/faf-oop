@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba50781-15ee-4ac8-9899-a3ac911de5f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileChangeDetection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileChangeDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileChangeDetection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/git/python.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/git/python.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/threads/CheckStatusThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/Commands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/threads/CheckStatusThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileChangeDetection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileChangeDetection.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
       <workItem from="1698139848376" duration="79000" />
       <workItem from="1698139949771" duration="421000" />
       <workItem from="1698323105283" duration="37000" />
-      <workItem from="1698428780375" duration="23757000" />
+      <workItem from="1698428780375" duration="24442000" />
     </task>
     <servers />
   </component>

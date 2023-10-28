@@ -1,10 +1,8 @@
 package org.oop.lab.two.behavior;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
 
-import org.oop.lab.two.behavior.Commands;
 
 public class FileChangeDetection extends Thread {
     protected static Map<String, FileInfo> fileSnapshot = Commands.fileSnapshot;

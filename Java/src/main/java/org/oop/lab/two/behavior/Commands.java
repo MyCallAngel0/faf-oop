@@ -1,5 +1,6 @@
 package org.oop.lab.two.behavior;
 
+import org.oop.lab.two.filetype.FileType;
 import org.oop.lab.two.filetype.ImageFile;
 import org.oop.lab.two.filetype.ProgramFile;
 import org.oop.lab.two.filetype.TextFile;
@@ -7,10 +8,8 @@ import org.oop.lab.two.filetype.TextFile;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Commands {
-    private static String folderPath = ".\\src\\main\\java\\org\\oop\\lab\\two\\git";
     protected static Map<String, FileInfo> fileSnapshot = new HashMap<>();
     protected static void commit() {
         System.out.println("Created Snapshot at: " + LocalDateTime.now());
@@ -23,10 +22,10 @@ public class Commands {
 
     protected static void info(String input) {
         FileManager fileManager = new FileManager();
-        String fileInput = input.substring(input.indexOf(" ") + 1, input.length()).trim();
+        String fileInput = input.substring(input.indexOf(" ") + 1).trim();
         switch (fileInput) {
             case "all files":
-                fileManager.fileArray.forEach(fileType -> fileType.getInfo());
+                fileManager.fileArray.forEach(FileType::getInfo);
                 break;
             case "image files":
                 fileManager.fileArray.forEach(fileType -> {
@@ -73,7 +72,7 @@ public class Commands {
             }
         }
         if (size < fileSnapshot.size()) {
-            List<String> fileNameArray = Arrays.stream(fileManager.getFiles()).map(File::getName).collect(Collectors.toList());
+            List<String> fileNameArray = Arrays.stream(fileManager.getFiles()).map(File::getName).toList();
             for (FileInfo fileInfo1 : fileSnapshot.values()) {
                 if (!fileNameArray.contains(fileInfo1.getFileName())) {
                     System.out.println(fileInfo1.getFileName() + " - Deleted");

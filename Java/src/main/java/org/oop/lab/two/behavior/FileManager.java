@@ -10,15 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileManager {
-    private final String directoryPath = ".\\src\\main\\java\\org\\oop\\lab\\two\\git";
-    private final File directory = new File(directoryPath);
 
     protected File[] files;
 
     protected List<FileType> fileArray = new ArrayList<>();
 
     public FileManager() {
+        String directoryPath = ".\\src\\main\\java\\org\\oop\\lab\\two\\git";
+        File directory = new File(directoryPath);
         this.files = directory.listFiles();
+        assert files != null;
         for (File file : files) {
             String fileName = file.getName();
             String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
