@@ -34,6 +34,7 @@ public class TextFile extends FileType {
                 this.words = wordCount;
                 this.characters = charCount;
             }
+            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

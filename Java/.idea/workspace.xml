@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0ba50781-15ee-4ac8-9899-a3ac911de5f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileChangeDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileChangeDetection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/snapshot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/snapshot.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/TextFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/filetype/TextFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/git/TagJob QR.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/git/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/git/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/git/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileChangeDetection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileChangeDetection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/TextFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/filetype/TextFile.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
