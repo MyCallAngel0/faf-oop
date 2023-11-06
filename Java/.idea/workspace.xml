@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ba50781-15ee-4ac8-9899-a3ac911de5f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileChangeDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/FileChangeDetection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/snapshot.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/two/behavior/snapshot.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileChangeDetection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/two/behavior/FileChangeDetection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -38,20 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/Desktop/Maven project/my-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;M:/Coding/OOP/faf-oop/Java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="M:\Coding\OOP\faf-oop\Java\src\main\java\org\oop\lab\two\git" />
@@ -75,6 +74,8 @@
       <workItem from="1698659476935" duration="187000" />
       <workItem from="1698659844240" duration="1192000" />
       <workItem from="1698765167824" duration="793000" />
+      <workItem from="1699042915031" duration="440000" />
+      <workItem from="1699262849846" duration="343000" />
     </task>
     <servers />
   </component>
