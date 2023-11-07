@@ -1,7 +1,15 @@
 package org.oop.lab.three.stack;
 
-import java.util.SequencedCollection;
+import java.util.Collection;
 
-public interface Stack<E> extends SequencedCollection<E> {
-    boolean add(Stack node);
+public interface Stack<T> extends Collection<T> {
+    @Override
+    boolean isEmpty();
+    @Override
+    int size();
+    void push(T t);
+    T pop();
+    T peek();
+
+
 }
