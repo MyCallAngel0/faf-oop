@@ -61,7 +61,25 @@ public class ArrayUpStack<T> extends AbstractCollection<T> implements Stack<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new StackIterator();
+    }
+
+    private class StackIterator implements Iterator<T> {
+        private int currentIndex = top;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex >= 0;
+        }
+
+        @SuppressWarnings("unchecked")
+        @Override
+        public T next() {
+            if (!hasNext()) {
+                throw new java.util.NoSuchElementException();
+            }
+            return (T) data[currentIndex--];
+        }
     }
 
     @Override

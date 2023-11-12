@@ -4,9 +4,9 @@ import java.util.AbstractCollection;
 import java.util.Iterator;
 
 public class ArrayDownStack<T> extends AbstractCollection<T> implements Stack<T> {
-    private Object[] data;
+    private final Object[] data;
     private int free;
-    private int capacity;
+    private final int capacity;
 
     public ArrayDownStack(int capacity) {
         this.capacity = capacity;
@@ -43,7 +43,6 @@ public class ArrayDownStack<T> extends AbstractCollection<T> implements Stack<T>
         return (T) data[free];
     }
 
-
     @Override
     public boolean isEmpty() {
         return free == capacity;
@@ -59,9 +58,25 @@ public class ArrayDownStack<T> extends AbstractCollection<T> implements Stack<T>
         return false;
     }
 
-    @Override
     public Iterator<T> iterator() {
-        return null;
+        return new ArrayDownStack.StackIterator();
+    }
+
+    private class StackIterator implements Iterator<T> {
+        private int currentIndex = free;
+        @Override
+        public boolean hasNext() {
+            return currentIndex <= capacity - 1;
+        }
+
+        @SuppressWarnings("unchecked")
+        @Override
+        public T next() {
+            if (!hasNext()) {
+                throw new java.util.NoSuchElementException();
+            }
+            return (T) data[currentIndex++];
+        }
     }
 
     @Override
