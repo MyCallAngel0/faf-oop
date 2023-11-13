@@ -11,5 +11,6 @@ public interface Stack<T> extends Collection<T> {
     T pop();
     T peek();
 
+    boolean isFull();
 
 }

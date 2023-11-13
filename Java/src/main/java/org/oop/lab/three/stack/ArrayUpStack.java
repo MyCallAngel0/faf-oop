@@ -16,9 +16,8 @@ public class ArrayUpStack<T> extends AbstractCollection<T> implements Stack<T> {
 
     @Override
     public void push(T item) {
-        if (top == capacity - 1) {
-            System.out.println("Stack is full.");
-            return;
+        if (isFull()) {
+            throw new java.util.NoSuchElementException("Stack is full");
         }
         data[++top] = item;
     }
@@ -27,8 +26,7 @@ public class ArrayUpStack<T> extends AbstractCollection<T> implements Stack<T> {
     @SuppressWarnings("unchecked")
     public T pop() {
         if (isEmpty()) {
-            System.out.println("Stack is empty.");
-            return null;
+            throw new java.util.NoSuchElementException("Stack is empty");
         }
         return (T) data[top--];
     }
@@ -37,8 +35,7 @@ public class ArrayUpStack<T> extends AbstractCollection<T> implements Stack<T> {
     @SuppressWarnings("unchecked")
     public T peek() {
         if (isEmpty()) {
-            System.out.println("Stack is empty.");
-            return null;
+            throw new java.util.NoSuchElementException("Stack is empty");
         }
         return (T) data[top];
     }
@@ -49,6 +46,9 @@ public class ArrayUpStack<T> extends AbstractCollection<T> implements Stack<T> {
         return top == -1;
     }
 
+    public boolean isFull() {
+        return top == capacity - 1;
+    }
     @Override
     public boolean contains(Object obj) {
         for (int i = 0; i < capacity; i++) {

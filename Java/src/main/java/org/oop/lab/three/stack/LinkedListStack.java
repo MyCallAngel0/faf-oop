@@ -16,9 +16,8 @@ public class LinkedListStack<T> extends AbstractCollection<T> implements Stack<T
     }
 
     public void push(T item) {
-        if (size == capacity) {
-            System.out.println("Stack is full. Cannot push.");
-            return;
+        if (isFull()) {
+            throw new java.util.NoSuchElementException("Stack is full");
         }
         Node<T> newNode = new Node<>(item);
         newNode.next = top;
@@ -26,10 +25,10 @@ public class LinkedListStack<T> extends AbstractCollection<T> implements Stack<T
         size++;
     }
 
+    @Override
     public T pop() {
         if (isEmpty()) {
-            System.out.println("Stack is empty.");
-            return null;
+            throw new java.util.NoSuchElementException("Stack is empty");
         }
         T item = top.data;
         top = top.next;
@@ -37,10 +36,10 @@ public class LinkedListStack<T> extends AbstractCollection<T> implements Stack<T
         return item;
     }
 
+    @Override
     public T peek() {
         if (isEmpty()) {
-            System.out.println("Stack is empty.");
-            return null;
+            throw new java.util.NoSuchElementException("Stack is empty");
         }
         return top.data;
     }
@@ -49,6 +48,9 @@ public class LinkedListStack<T> extends AbstractCollection<T> implements Stack<T
         return size == 0;
     }
 
+    public boolean isFull() {
+        return size == capacity;
+    }
     public int size() {
         return size;
     }

@@ -57,7 +57,7 @@ public class LinearQueue<T> extends AbstractCollection<T> implements Queue<T> {
     public boolean isEmpty() {
             return size == 0;
         }
-
+        @Override
     public boolean isFull() {
         return size == capacity;
     }

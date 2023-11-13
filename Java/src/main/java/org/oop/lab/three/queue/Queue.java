@@ -10,4 +10,6 @@ public interface Queue<T> extends Collection<T> {
     boolean isEmpty();
     @Override
     int size();
+
+    boolean isFull();
 }

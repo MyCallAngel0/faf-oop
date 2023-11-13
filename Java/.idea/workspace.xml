@@ -7,13 +7,12 @@
     <list default="true" id="0ba50781-15ee-4ac8-9899-a3ac911de5f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/queue/LinearQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/queue/LinearQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/queue/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/queue/Queue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/ArrayDownStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/ArrayDownStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/ArrayUpStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/ArrayUpStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/three/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/three/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/three/queue/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/three/queue/Queue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/three/stack/ArrayDownStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/three/stack/ArrayDownStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/oop/lab/three/stack/ArrayUpStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/oop/lab/three/stack/ArrayUpStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/LinkedListStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/LinkedListStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/oop/lab/three/stack/Stack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +89,8 @@
       <workItem from="1699381560991" duration="504000" />
       <workItem from="1699542457034" duration="26000" />
       <workItem from="1699817079231" duration="1598000" />
+      <workItem from="1699818697681" duration="64000" />
+      <workItem from="1699868419876" duration="1646000" />
     </task>
     <servers />
   </component>
